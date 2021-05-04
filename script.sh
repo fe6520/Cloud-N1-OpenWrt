@@ -1,4 +1,5 @@
 #!/bin/bash
+#ABC
 cd openwrt
 # wireless
 #rm -rf files/etc/config/wireless
