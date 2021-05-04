@@ -1,18 +1,18 @@
 name: Cloud N1 OpenWrt
 
 on:
-  push:
-    branches:
-      - main
-    paths:
-      - 'script.sh'
-      - 'config.sh'
-  schedule:
-    - cron: 0 8 * * 0
+  repository_dispatch:
+  workflow_dispatch:
+    inputs:
+      ssh:
+        description: 'SSH connection to Actions'
+        required: false
+        default: 'false'
 
 env:
   REPO_URL: https://github.com/coolsnowwolf/lede
   REPO_BRANCH: master
+  FEEDS_CONF: feeds.conf.default
   CONFIG_FILE: .config
   SCRIPT_SH: script.sh
   CONFIG_SH: config.sh
