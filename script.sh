@@ -16,6 +16,7 @@ mv -f theme-temp/luci-theme-opentomcat package/lean/
 rm -rf theme-temp
 echo "src-git small https://github.com/kenzok8/small" > feeds.conf.default
 echo "src-git kenzo https://github.com/kenzok8/openwrt-packages" > feeds.conf.default
+git clone https://github.com/fe6520/OpenAppFilter.git package/luci-app-dnsfilter
 default_theme='opentomcat'
 sed -i "s/bootstrap/$default_theme/g" feeds/luci/modules/luci-base/root/etc/config/luci
 # Add luci-app-vssr
