@@ -14,6 +14,8 @@ rm -rf theme-temp/luci-theme-opentomcat/LICENSE
 rm -rf theme-temp/luci-theme-opentomcat/README.md
 mv -f theme-temp/luci-theme-opentomcat package/lean/
 rm -rf theme-temp
+echo "src-git small https://github.com/kenzok8/small" > feeds.conf.default
+echo "src-git kenzo https://github.com/kenzok8/openwrt-packages" > feeds.conf.default
 default_theme='opentomcat'
 sed -i "s/bootstrap/$default_theme/g" feeds/luci/modules/luci-base/root/etc/config/luci
 # Add luci-app-vssr
